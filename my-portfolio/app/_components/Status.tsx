@@ -1,7 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import { LucideIcon, Scroll, Calculator, Sun, CookingPot, File, IdCard, Gamepad, Gamepad2 } from 'lucide-react';
+import { LucideIcon, Scroll, Calculator, Sun, CookingPot, File, IdCard, Gamepad, Gamepad2, } from 'lucide-react';
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge"
+
+
 
 export const Status = () => {
    return (
@@ -23,15 +26,25 @@ export const Status = () => {
             </Card>
          </div>
          <div className="flex-[2] w-full flex flex-col gap-4">
-            <Card className="p-4 flex-1">Work</Card>
+            <Card className="p-4 flex-1">
+            <p className="text-lg text-muted-foreground">Work</p>
+            <div className="flex flex-col gap-4">
+               {WORKS.map((work, index) => (
+                  <Work
+                     key={index}
+                     {...work}
+                  />
+               ))}
+               </div>
+            </Card>
+            </div>
             <Card className="p-4 flex-1">Contact me</Card>
-         </div>
       </Section>
    );
 };
 
 
-const SIDE_PROJECTS = [
+const SIDE_PROJECTS:SideProjectProps[] = [
    {
       Logo: CookingPot,
       title: "Cook-your-way",
@@ -89,12 +102,12 @@ type SideProjectProps = {
    url: string;
 }
 
-const SideProject = (props:SideProjectProps)=> {
+const SideProject = (props: SideProjectProps) => {
    
    return (
       <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
          <span className="bg-accent text-accent-foreground p-3 rounded-sm">
-            <props.Logo />
+            <props.Logo size={16} />
          </span>
          <div>
             <p className="text-lg font-semibold">{props.title}</p>
@@ -102,4 +115,60 @@ const SideProject = (props:SideProjectProps)=> {
          </div>
       </Link>
    );
+};
+
+const WORKS: WorkProps[] = [{
+   image: "https://th.bing.com/th/id/OIP.zVFvjnlWhsK_5rNddfWfDQHaHa?w=168&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+   title: "l'Oréal",
+   role: "Agent de fabrication",
+   date: "2022-2023",
+   url: "https://l'oréal.com",
+   intérim:true,
+},
+   {
+      image: "https://th.bing.com/th/id/OIP.sI38R1RioFl_NF4u4fiF8wHaHa?w=184&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      title: "FLC télécom",
+      role: "Monteur cableur",
+      date: "2022-2023",
+      url: "https://l'oréal.com",
+      intérim: false,
+   },
+   {
+      image: "https://media-exp1.licdn.com/dms/image/C560BAQGP8erPosNMsw/company-logo_200_200/0/1532440149837?e=2159024400&v=beta&t=1Btcso_I4UQd8mrOCJ0eeUii1xBNFLF9UlDiIlrHRf8",
+      title: "Legendre",
+      role: "Préparateur de commandes",
+      date: "2022-2023",
+      url: "https://l'oréal.com",
+      intérim: true,
+   },
+];
+
+type WorkProps = {
+   image:string;
+   title: string;
+   role: string;
+   date: string;
+   url: string;
+   intérim: boolean;
 }
+
+const Work = (props: WorkProps) => {
+
+   return (
+      <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
+            <img src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-lg " />
+         <div>
+            <div className="flex items-center gap-2">
+            <p className="text-lg font-semibold">{props.title}</p>
+               {props.intérim && <Badge variant="outline">intérim</Badge>
+}
+            </div>
+            <p className="text-sm text-muted-foreground">{props.role}</p>
+         </div>
+         <div className="ml-auto">
+            <p className="text-sm text-muted-foreground">{props.date}</p>
+         </div>
+      </Link>
+   );
+}
+
