@@ -1,13 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import { LucideIcon, Smartphone, Scroll, Calculator, Sun } from 'lucide-react';
+import { LucideIcon, Scroll, Calculator, Sun, CookingPot, File, IdCard, Gamepad, Gamepad2 } from 'lucide-react';
 import Link from "next/link";
 
 export const Status = () => {
    return (
       <Section className="flex max-md:flex-col items-start gap-4">
          <div className="flex-[3] w-full">
-            <Card className=" p-4 w-full flex flex-coll gap-2 w-ful">
+            <Card className=" p-4 w-full flex flex-col gap-2 w-ful">
                <p className="text-lg text-muted-foreground">Side, fun projects</p>
                <div className="flex flex-col gap-4">
                   {SIDE_PROJECTS.map((project, index) => (
@@ -24,9 +24,7 @@ export const Status = () => {
          </div>
          <div className="flex-[2] w-full flex flex-col gap-4">
             <Card className="p-4 flex-1">Work</Card>
-            <Card className="p-4 flex-1">
-               Contact me
-            </Card>
+            <Card className="p-4 flex-1">Contact me</Card>
          </div>
       </Section>
    );
@@ -35,7 +33,7 @@ export const Status = () => {
 
 const SIDE_PROJECTS = [
    {
-      Logo: Smartphone,
+      Logo: CookingPot,
       title: "Cook-your-way",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
       url: "Lorem ipsum dolor sit amet consectetur adipisicing."
@@ -57,6 +55,30 @@ const SIDE_PROJECTS = [
       title: "Projet-météo",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
       url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+   },
+   {
+      Logo: File,
+      title: "CV",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+   },
+   {
+      Logo: IdCard,
+      title: "carte de visite",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+   },
+   {
+      Logo: Gamepad,
+      title: "Froggy",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+   },
+   {
+      Logo: Gamepad2,
+      title: "Tape le lapin",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
    }
 ]
 
@@ -67,13 +89,10 @@ type SideProjectProps = {
    url: string;
 }
 
-const SideProject = (props: {
+const SideProject = (props:SideProjectProps)=> {
    
-   Logo: LucideIcon, title: string, description: string, url: string;
-}) => {
    return (
-      <Link href={props.url} className="inline-flex items-center gap-4 hover-bg-accent/50 transition-colors p-1 rounded">
-      
+      <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
          <span className="bg-accent text-accent-foreground p-3 rounded-sm">
             <props.Logo />
          </span>
