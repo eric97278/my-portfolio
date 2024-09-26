@@ -1,18 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { ComponentPropsWithoutRef } from "react"
+import { Code } from "lucide-react";
 import { Section } from "./Section"
-import { cn } from "@/lib/utils"
 import { AndroidIcon } from "./icons/AndroidIcon";
 import Link from "next/link";
 
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
-   return (
-      <span
-         className={cn("bg-accent/30 font-mono border hover:bg-accent/50 transition-colors border-accent px-1 py-0.5 text-primary rounded-sm", className)}
-         {...props}
-      />
-   );
-};
+
 
 export const Hero = () => {
    return <Section className="flex max-md:flex-col items-start gap-4">

@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import { LucideIcon, Scroll, Calculator, Sun, CookingPot, File, IdCard, Gamepad, Gamepad2, } from 'lucide-react';
+import { LucideIcon, Scroll, Calculator, Sun, CookingPot, File, IdCard, Gamepad, Gamepad2, ArrowUpRight, } from 'lucide-react';
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge"
 
@@ -37,10 +37,12 @@ export const Status = () => {
                ))}
                </div>
             </Card>
-            </div>
          <Card className="p-4 flex-1">
             <p className="text-lg text-muted-foreground">Contact me</p>
-         </Card>
+            <ContactCard name="@ericchillan" image="https://th.bing.com/th/id/OIP.eNIyS5Ol1HFyu899KRlyFAHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7" mediumImage="https://th.bing.com/th/id/OIP.TftfstX0ZbE_nplCVPOd1QHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7=" description="16'0000" />
+            <ContactCard name="eric chillan" image="https://th.bing.com/th/id/OIP.eNIyS5Ol1HFyu899KRlyFAHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7" mediumImage="https://th.bing.com/th/id/OIP.Cn9SAHCmTy8MEaixr8bqpAHaHa?w=207&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7" description="16'0000" />
+            </Card>
+         </div>
       </Section>
    );
 };
@@ -52,15 +54,30 @@ const ContactCard = (props: {
    description: string;
 }) => {
    return (
-      <Card className="p-3 bg-accent/10">
+      <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
          <div className="relative">
-            <img src={props.image} alt={props.name} className="w-10 h-10" />
-            <img src={props.mediumImage} alt={props.name} className="w-4 h-4 absolute -bottom-2 -right-2" />
-
+            <img
+               src={props.image}
+               alt={props.name}
+               className="w-10 h-10 rounded-full object-contain"
+            />
+            <img
+               src={props.mediumImage}
+               alt={props.name}
+               className="w-5 h-5 absolute -bottom-1 -right-1 rounded-full object-contain"
+            />
          </div>
+            <div className="mr-auto">
+               <div className="flex items-center gap-2">
+                  <p className="text-lg font-semibold">{props.name}</p>
+               </div>
+               <p className="text-xs text-muted-foreground">{props.description}</p>
+            </div>
+            <ArrowUpRight className="group-hover:translate-x-2 mr-4 group-hover:-translate-y-2 transition-transform" size={16} />
       </Card>
-   )
- };
+   );
+};
+
 
 
 
@@ -143,7 +160,7 @@ const WORKS: WorkProps[] = [{
    role: "Agent de fabrication",
    date: "2022-2023",
    url: "https://l'oréal.com",
-   intérim:true,
+   contrat:"intérim",
 },
    {
       image: "https://th.bing.com/th/id/OIP.sI38R1RioFl_NF4u4fiF8wHaHa?w=184&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7",
@@ -151,7 +168,7 @@ const WORKS: WorkProps[] = [{
       role: "Monteur cableur",
       date: "2022-2023",
       url: "https://l'oréal.com",
-      intérim: false,
+      contrat: "CDI",
    },
    {
       image: "https://media-exp1.licdn.com/dms/image/C560BAQGP8erPosNMsw/company-logo_200_200/0/1532440149837?e=2159024400&v=beta&t=1Btcso_I4UQd8mrOCJ0eeUii1xBNFLF9UlDiIlrHRf8",
@@ -159,7 +176,25 @@ const WORKS: WorkProps[] = [{
       role: "Préparateur de commandes",
       date: "2022-2023",
       url: "https://l'oréal.com",
-      intérim: true,
+      contrat: "intérim",
+   },
+   ,
+   {
+      image: "https://th.bing.com/th/id/OIP.gg7PXxCyzZ6SuGbaT5UpXgHaD4?w=326&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      title: "Fiabila",
+      role: "Agent de fabrication",
+      date: "2022-2023",
+      url: "https://l'oréal.com",
+      contrat: "CDI",
+   },
+   ,
+   {
+      image: "https://th.bing.com/th/id/OIP.6IA3JYj9tixYW9GvfnkSxgHaHT?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      title: "Centre de loisirs",
+      role: "Animateurs",
+      date: "2022-2023",
+      url: "https://l'oréal.com",
+      contrat: "CDI",
    },
 ];
 
@@ -169,19 +204,21 @@ type WorkProps = {
    role: string;
    date: string;
    url: string;
-   intérim?: boolean;
+   contrat: string;
 }
 
 const Work = (props: WorkProps) => {
 
    return (
       <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
-            <img src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-lg " />
+         <img
+            src={props.image}
+            alt={props.title}
+            className="w-10 h-10 object-contain rounded-lg " />
          <div className="mr-auto">
             <div className="flex items-center gap-2">
             <p className="text-lg font-semibold">{props.title}</p>
-               {props.intérim && <Badge variant="outline">intérim</Badge>
-}
+               {props.contrat && <Badge variant="outline">{props.contrat}</Badge>}
             </div>
             <p className="text-xs text-muted-foreground">{props.role}</p>
          </div>
