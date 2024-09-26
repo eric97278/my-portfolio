@@ -38,10 +38,30 @@ export const Status = () => {
                </div>
             </Card>
             </div>
-            <Card className="p-4 flex-1">Contact me</Card>
+         <Card className="p-4 flex-1">
+            <p className="text-lg text-muted-foreground">Contact me</p>
+         </Card>
       </Section>
    );
 };
+
+const ContactCard = (props: {
+   image: string;
+   mediumImage: string;
+   name: string;
+   description: string;
+}) => {
+   return (
+      <Card className="p-3 bg-accent/10">
+         <div className="relative">
+            <img src={props.image} alt={props.name} className="w-10 h-10" />
+            <img src={props.mediumImage} alt={props.name} className="w-4 h-4 absolute -bottom-2 -right-2" />
+
+         </div>
+      </Card>
+   )
+ };
+
 
 
 const SIDE_PROJECTS:SideProjectProps[] = [
@@ -149,7 +169,7 @@ type WorkProps = {
    role: string;
    date: string;
    url: string;
-   intérim: boolean;
+   intérim?: boolean;
 }
 
 const Work = (props: WorkProps) => {
@@ -157,17 +177,15 @@ const Work = (props: WorkProps) => {
    return (
       <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
             <img src={props.image} alt={props.title} className="w-10 h-10 object-contain rounded-lg " />
-         <div>
+         <div className="mr-auto">
             <div className="flex items-center gap-2">
             <p className="text-lg font-semibold">{props.title}</p>
                {props.intérim && <Badge variant="outline">intérim</Badge>
 }
             </div>
-            <p className="text-sm text-muted-foreground">{props.role}</p>
+            <p className="text-xs text-muted-foreground">{props.role}</p>
          </div>
-         <div className="ml-auto">
-            <p className="text-sm text-muted-foreground">{props.date}</p>
-         </div>
+            <p className="text-xs text-end text-muted-foreground">{props.date}</p>
       </Link>
    );
 }
