@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Code } from "./Code";
 import { AndroidStudioIcon } from "./icons/AndroidStudioLogo";
 import { CssLogo } from "./icons/CssLogo";
@@ -10,7 +11,6 @@ import { PhpLogo } from "./icons/PhpLogo";
 import { ReactLogo } from "./icons/ReactLogo";
 import { TailswindLogo } from "./icons/TailswindLogo";
 import { Section } from "./Section";
-import { Badge } from "@/components/ui/badge";
 
 export const Skills = () => {
    return (

@@ -1,8 +1,9 @@
 import { Card } from "@/components/ui/card";
-import { Section } from "./Section";
-import { LucideIcon, Scroll, Calculator, Sun, CookingPot, File, IdCard, Gamepad, Gamepad2, ArrowUpRight, } from 'lucide-react';
+import { Calculator, CookingPot, File, Gamepad, Gamepad2, IdCard, LucideIcon, Scroll, Sun } from 'lucide-react';
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge"
+import { ContactCard } from "./ContactCard";
+import { Section } from "./Section";
+import { Work, WorkProps } from "./Work";
 
 
 
@@ -44,37 +45,6 @@ export const Status = () => {
             </Card>
          </div>
       </Section>
-   );
-};
-
-const ContactCard = (props: {
-   image: string;
-   mediumImage: string;
-   name: string;
-   description: string;
-}) => {
-   return (
-      <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
-         <div className="relative">
-            <img
-               src={props.image}
-               alt={props.name}
-               className="w-10 h-10 rounded-full object-contain"
-            />
-            <img
-               src={props.mediumImage}
-               alt={props.name}
-               className="w-5 h-5 absolute -bottom-1 -right-1 rounded-full object-contain"
-            />
-         </div>
-            <div className="mr-auto">
-               <div className="flex items-center gap-2">
-                  <p className="text-lg font-semibold">{props.name}</p>
-               </div>
-               <p className="text-xs text-muted-foreground">{props.description}</p>
-            </div>
-            <ArrowUpRight className="group-hover:translate-x-2 mr-4 group-hover:-translate-y-2 transition-transform" size={16} />
-      </Card>
    );
 };
 
@@ -198,32 +168,5 @@ const WORKS: WorkProps[] = [{
    },
 ];
 
-type WorkProps = {
-   image:string;
-   title: string;
-   role: string;
-   date: string;
-   url: string;
-   contrat: string;
-}
 
-const Work = (props: WorkProps) => {
-
-   return (
-      <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
-         <img
-            src={props.image}
-            alt={props.title}
-            className="w-10 h-10 object-contain rounded-lg " />
-         <div className="mr-auto">
-            <div className="flex items-center gap-2">
-            <p className="text-lg font-semibold">{props.title}</p>
-               {props.contrat && <Badge variant="outline">{props.contrat}</Badge>}
-            </div>
-            <p className="text-xs text-muted-foreground">{props.role}</p>
-         </div>
-            <p className="text-xs text-end text-muted-foreground">{props.date}</p>
-      </Link>
-   );
-}
 

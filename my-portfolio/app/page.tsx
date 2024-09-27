@@ -1,8 +1,10 @@
+import { Contact } from "./_components/Contact";
 import { Header } from "./_components/Header";
 import { Hero } from "./_components/Hero";
 import { Skills } from "./_components/Skills";
 import { Spacing } from "./_components/Spacing";
 import { Status } from "./_components/Status";
+
 
 export default function Home() {
   return (
@@ -21,6 +23,10 @@ export default function Home() {
 
       <Skills />
 
+      <Spacing size="md" />
+
+      <Contact size="md" />
+      
       <Spacing size="md" />
     </main>
   );
