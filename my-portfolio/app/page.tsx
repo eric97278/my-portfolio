@@ -8,12 +8,12 @@ import { Status } from "./_components/Status";
 
 export default function Home() {
   return (
-    <main>
+    <main className="animatedBackground">
       <Header />
 
       <Spacing size="md" />
 
-      <Hero />
+      <Hero size="md" />
 
       <Spacing size="md" />
 
@@ -26,7 +26,7 @@ export default function Home() {
       <Spacing size="md" />
 
       <Contact size="md" />
-      
+
       <Spacing size="md" />
     </main>
   );

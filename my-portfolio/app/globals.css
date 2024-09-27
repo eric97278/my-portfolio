@@ -34,3 +34,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animatedBackground {
+background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f, #6a85b6, #bac8e0, #2c3e50, #34495e, #1c2833, #0e2f44);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+}
