@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { Code } from "lucide-react";
+import { Code } from "./Code";
 import { Section } from "./Section"
 import { AndroidIcon } from "./icons/AndroidIcon";
-import Link from "next/link";
 
 
 
@@ -13,14 +12,9 @@ export const Hero = () => {
          <h3 className="text-3xl font-caption">
             Developpeur Full-Stack en recherche alternance</h3>
          <p className="text-base">
-            I love creating apps with {" "}
-            <Link href="https://github.com/eric97278/Cook-your-way">
-            <Code className="inline-flex items-center"><AndroidIcon size={16} className="inline"
-               />
-                  Kotlin
-               </Code>
-            </Link>
-         </p>
+            I love creating apps with  {" "}   <Code className="inline-flex items-center gap-1">
+               <AndroidIcon size={16} className="inline"/>Kotlin </Code> 
+            </p>
       </div>
       <div className="flex-[2] max-md:m-auto ml-auto">
          <img

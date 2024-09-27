@@ -10,7 +10,7 @@ import { PhpLogo } from "./icons/PhpLogo";
 import { ReactLogo } from "./icons/ReactLogo";
 import { TailswindLogo } from "./icons/TailswindLogo";
 import { Section } from "./Section";
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
 
 export const Skills = () => {
    return (

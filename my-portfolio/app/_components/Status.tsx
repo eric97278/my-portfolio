@@ -86,37 +86,37 @@ const SIDE_PROJECTS:SideProjectProps[] = [
       Logo: CookingPot,
       title: "Cook-your-way",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
-      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+      url: "https://github.com/eric97278/Cook-your-way"
    },
    {
       Logo: Scroll,
       title: "To-Do-List",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
-      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+      url: "https://github.com/eric97278/To-Do-List"
    },
    {
       Logo: Calculator,
       title: "Calculator",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
-      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+      url: "https://github.com/eric97278/calculator"
    },
    {
       Logo: Sun,
       title: "Projet-météo",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
-      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+      url: "https://github.com/eric97278/projet-API"
    },
    {
       Logo: File,
       title: "CV",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
-      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+      url: "https://github.com/eric97278/cv"
    },
    {
       Logo: IdCard,
       title: "carte de visite",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
-      url: "Lorem ipsum dolor sit amet consectetur adipisicing."
+      url: "https://github.com/eric97278/Carte-de-visite"
    },
    {
       Logo: Gamepad,
