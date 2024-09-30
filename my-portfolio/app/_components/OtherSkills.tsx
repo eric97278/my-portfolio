@@ -1,9 +1,7 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 import { Card } from "@/components/ui/card";
-import { Section } from "lucide-react";
+
+
+// Importation des logos
 import { CssLogo } from "./icons/CssLogo";
 import { DockerLogo } from "./icons/DockerLogo";
 import { FigmaLogo } from "./icons/FigmaLogo";
@@ -30,18 +28,17 @@ import { TailswindLogo } from "./icons/TailswindLogo";
 import { TrelloLogo } from "./icons/TrelloLogo";
 import { ViteLogo } from "./icons/Vite-jsLogo";
 import { VueLogo } from "./icons/Vue-jsLogo";
-
+import { Section } from "./Section";
 
 export const OtherSkills = () => {
-   
    return (
       <Section className="flex max-md:flex-col items-start gap-4">
          <div className="flex-[3] w-full">
-            <Card className=" p-4 w-full flex flex-col gap-2 w-ful">
+            <Card className="p-4 w-full flex flex-col gap-2">
                <p className="text-lg text-muted-foreground">All my Skills</p>
-               <div className="grid grid-cols-2 md:grid-cols-4 gap-4"> {/* Utilisation de Grid pour la mise en page */}
+               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {/* Liste des compétences avec correspondance correcte entre les logos et les labels */}
                   <div className="flex items-center gap-2">
-                     
                      <HtmlLogo size={42} className="text-red-500" />
                      <span>HTML5</span>
                   </div>
@@ -66,12 +63,13 @@ export const OtherSkills = () => {
                      <span>Kotlin</span>
                   </div>
                   <div className="flex items-center gap-2">
-                     <LuaLogo size={42} className="text-green-500" />
+                     <LuaLogo size={42} className="text-green-500 animate-spin"
+                        style={{ animationDuration: "10s" }} />
                      <span>Lua</span>
                   </div>
                   <div className="flex items-center gap-2">
                      <DockerLogo size={42} className="text-blue-500" />
-                     <span>PowerShell</span>
+                     <span>Docker</span>
                   </div>
                   <div className="flex items-center gap-2">
                      <GithubIcon size={42} className="text-orange-500" />
@@ -79,11 +77,11 @@ export const OtherSkills = () => {
                   </div>
                   <div className="flex items-center gap-2">
                      <TrelloLogo size={42} className="text-blue-600" />
-                     <span>Docker</span>
+                     <span>Trello</span>
                   </div>
                   <div className="flex items-center gap-2">
                      <FigmaLogo size={42} className="text-lightblue-500" />
-                     <span>Google Cloud</span>
+                     <span>Figma</span>
                   </div>
                   <div className="flex items-center gap-2">
                      <LaravelLogo size={42} className="text-red-500" />
@@ -107,46 +105,49 @@ export const OtherSkills = () => {
                   </div>
                   <div className="flex items-center gap-2">
                      <LinkedinIcon size={42} className="text-pink-500" />
-                     <span>Figma</span>
+                     <span>LinkedIn</span>
                   </div>
                   <div className="flex items-center gap-2">
                      <NotionLogo size={42} className="text-purple-500" />
-                     <span>Canva</span>
+                     <span>Notion</span>
                   </div>
                   <div className="flex items-center gap-2">
                      <RaspberryLogo size={42} className="text-gray-600" />
-                     <span>GitHub Actions</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                     <ReactLogo size={42} className="text-green-500" />
                      <span>Raspberry Pi</span>
                   </div>
                   <div className="flex items-center gap-2">
-                     <PostmanLogo size={42} className="text-red-500" />
-                     <span>Notion</span>
+                     <ReactLogo size={42} className="text-green-500 animate-spin"
+                        style={{ animationDuration: "10s" }} />
+                     <span>React</span>
                   </div>
                   <div className="flex items-center gap-2">
-                     <NextLogo size={42} className="text-red-500" />
-                     <span>Notion</span>
-                  </div><div className="flex items-center gap-2">
+                     <PostmanLogo size={42} className="text-red-500 animate-spin"
+                        style={{ animationDuration: "10s" }} />
+                     <span>Postman</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                     <NextLogo size={42} className="text-red-500 animate-spin"
+                        style={{ animationDuration: "10s" }} />
+                     <span>Next.js</span>
+                  </div>
+                  <div className="flex items-center gap-2">
                      <NpmLogo size={42} className="text-red-500" />
-                     <span>Notion</span>
-                  </div><div className="flex items-center gap-2">
+                     <span>NPM</span>
+                  </div>
+                  <div className="flex items-center gap-2">
                      <PnpmLogo size={42} className="text-red-500" />
-                     <span>Notion</span>
-                  </div><div className="flex items-center gap-2">
+                     <span>PNPM</span>
+                  </div>
+                  <div className="flex items-center gap-2">
                      <FirebaseLogo size={42} className="text-red-500" />
-                     <span>Notion</span>
-                  </div><div className="flex items-center gap-2">
-                     <MysqlLogo size={42} className="text-red-500" />
-                     <span>Notion</span>
-                  </div><div className="flex items-center gap-2">
-                     <TrelloLogo size={42} className="text-red-500" />
-                     <span>Notion</span>
+                     <span>Firebase</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                     <MysqlLogo size={42} className="text-blue-600" />
+                     <span>MySQL</span>
                   </div>
                </div>
             </Card>
-         
          </div>
       </Section>
    );
