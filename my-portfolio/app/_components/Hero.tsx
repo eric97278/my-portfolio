@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Code } from "./Code";
-import { Section } from "./Section"
-import { AndroidIcon } from "./icons/AndroidIcon";
+import { Section } from "./Section";
 
 
 
@@ -12,8 +10,7 @@ export const Hero = () => {
          <h3 className="text-3xl font-caption">
             Developpeur Full-Stack en recherche alternance</h3>
          <p className="text-base">
-            I love creating apps with  {" "}   <Code className="inline-flex items-center gap-1">
-               <AndroidIcon size={16} className="inline"/>Kotlin </Code> 
+            <a href="" download="CV.pdf">Télécharge mon CV</a>
             </p>
       </div>
       <div className="flex-[2] max-md:m-auto ml-auto">
