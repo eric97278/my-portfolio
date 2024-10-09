@@ -30,6 +30,8 @@ import { ReactLogo } from "./icons/ReactLogo";
 import { ViteLogo } from "./icons/Vite-jsLogo";
 import { VueLogo } from "./icons/Vue-jsLogo";
 import { Section } from "./Section";
+import { SiTypescript } from "react-icons/si";
+
 
 export const OtherSkillsAndReadme = () => {
    return (
@@ -66,7 +68,13 @@ export const OtherSkillsAndReadme = () => {
                      <div className="flex items-center gap-2">
                         <FaPython size={42} className="text-blue-600" />
                         <span>Python</span>
-                     </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                     <SiTypescript size={42} className="text-blue-600" />
+                     <span>Typescript</span>
+                  </div>
+                  
+                  
                   </div>
 
                   {/* Frameworks et bibliothèques */}

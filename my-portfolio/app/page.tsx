@@ -1,7 +1,7 @@
 import { Contact } from "./_components/Contact";
 import Github from "./_components/Github";
 import { Header } from "./_components/Header";
-import { Hero } from "./_components/Hero";
+import { Head, Hero } from "./_components/head";
 import { OtherSkills, OtherSkillsAndReadme } from "./_components/OtherSkillsAndReadme";
 import { Skills } from "./_components/Skills";
 import { Spacing } from "./_components/Spacing";
@@ -16,7 +16,7 @@ export default function Home() {
 
       <Spacing size="md" />
 
-      <Hero size="md" />
+      <Head size="md" />
 
       <Spacing size="md" />
 

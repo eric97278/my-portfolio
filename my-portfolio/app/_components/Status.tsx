@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ContactCard } from "./ContactCard";
 import { Section } from "./Section";
 import { Work, WorkProps } from "./Work";
+import { Code } from "./Code";
 
 
 
@@ -55,49 +56,49 @@ const SIDE_PROJECTS:SideProjectProps[] = [
    {
       Logo: CookingPot,
       title: "Cook-your-way",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      description: <p>Un projet <Code>KOTLIN</Code> qui créer une application mobile de cuisine sans API en utilisant une base de données avec firebase.</p> ,
       url: "https://github.com/eric97278/Cook-your-way"
    },
    {
       Logo: Scroll,
       title: "To-Do-List",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      description: <p>Un code en <Code>HTML,JS,CSS</Code> donnant une TO-DO-LIST, un projet proposé par chatgpt.</p>,
       url: "https://github.com/eric97278/To-Do-List"
    },
    {
       Logo: Calculator,
       title: "Calculator",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      description: <p>Un projet tout droit sorti de chatgpt pour créer une calculatrice en <Code>HTML, JS, CSS</Code></p>,
       url: "https://github.com/eric97278/calculator"
    },
    {
       Logo: Sun,
       title: "Projet-météo",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      description: <p>Un projet collectif pour se faire la main avec les <Code>API</Code>, ce projet en <Code>HTML, JS et CSS</Code>utilise une API météo ainsi que l'API de spotify proposant une playlist selon la météo et mettant en place des animations climatique</p>,
       url: "https://github.com/eric97278/projet-API"
    },
    {
       Logo: File,
       title: "CV",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      description: <p>Ceci est projet personnelle, pour créer un CV en utilisant principalement du <Code>CSS</Code> .</p>,
       url: "https://github.com/eric97278/cv"
    },
    {
       Logo: IdCard,
       title: "carte de visite",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      description: <p>Idem que le CV mais pour une carte de visite.</p>,
       url: "https://github.com/eric97278/Carte-de-visite"
    },
    {
       Logo: Gamepad,
       title: "Froggy",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      description: <p>Notres tout premier projet collectif, un jeux de plateformes avec pico-8 en <Code>LUA</Code></p>,
       url: "Lorem ipsum dolor sit amet consectetur adipisicing."
    },
    {
       Logo: Gamepad2,
       title: "Tape le lapin",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione",
+      description: <p>Un tuto YouTube suivi pour me familiariser avec kotlin et Android studio</p>,
       url: "Lorem ipsum dolor sit amet consectetur adipisicing."
    }
 ]
