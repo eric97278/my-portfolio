@@ -4,6 +4,8 @@ import { Section } from "./Section"
 import  Link  from "next/link"
 import { buttonVariants } from "@/components/ui/button"
 import { LinkedinIcon } from "./icons/LinkedinIcon"
+import { SiBento } from "react-icons/si";
+import { Code } from "./Code"
 
 export const Header = () => {
    return (
@@ -22,7 +24,13 @@ export const Header = () => {
                   href="https://www.linkedin.com/in/eric-chillan"
                className={cn(buttonVariants({ variant: "outline" }), "size-10 p-0")}>
                <LinkedinIcon size={26} className="text-foreground" />
-            </Link>
+               </Link>
+               <Link
+                  href="https://bento.me/eric972"
+                  className={cn(buttonVariants({ variant: "outline" }), "size-10 p-0")}>
+                  <SiBento  size={26} className="text-foreground" />
+               </Link>
+               <a href="mailTo:ericchillan@gmail.com"><Code>M'envoyer un message?</Code></a>
             </ul> 
          </Section>
       </header>

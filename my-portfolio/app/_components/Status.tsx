@@ -1,10 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Calculator, CookingPot, File, Gamepad, Gamepad2, IdCard, LucideIcon, Scroll, Sun } from 'lucide-react';
 import Link from "next/link";
-import { ContactCard } from "./ContactCard";
+import { Code } from "./Code";
 import { Section } from "./Section";
 import { Work, WorkProps } from "./Work";
-import { Code } from "./Code";
 
 
 
@@ -38,11 +37,6 @@ export const Status = () => {
                   />
                ))}
                </div>
-            </Card>
-         <Card className="p-4 flex-1">
-            <p className="text-lg text-muted-foreground">Contact me</p>
-            <ContactCard name="@ericchillan" image="https://th.bing.com/th/id/OIP.eNIyS5Ol1HFyu899KRlyFAHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7" mediumImage="https://th.bing.com/th/id/OIP.TftfstX0ZbE_nplCVPOd1QHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7=" description="16'0000" />
-            <ContactCard name="eric chillan" image="https://th.bing.com/th/id/OIP.eNIyS5Ol1HFyu899KRlyFAHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7" mediumImage="https://th.bing.com/th/id/OIP.Cn9SAHCmTy8MEaixr8bqpAHaHa?w=207&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7" description="16'0000" />
             </Card>
          </div>
       </Section>

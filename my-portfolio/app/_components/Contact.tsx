@@ -1,34 +1,30 @@
 import { Badge } from "@/components/ui/badge";
-import { ContactCard } from "./ContactCard";
 import { Section } from "./Section";
+import { Card } from "@/components/ui/card";
 
 export const Contact = () => {
    return (
-      <Section className="flex flex-col items-start gap-4">
-         <Badge variant={"outline"}>Contact me</Badge>
-         <h2 className=" pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-            I will be happy to work with you.
-         </h2>
-         <div className="flex max-md:flex-col gap-4">
-            <ContactCard
-               Url="https://github.com/eric97278"
-               name="@ericchillan"
-               image="https://th.bing.com/th/id/OIP.eNIyS5Ol1HFyu899KRlyFAHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-               mediumImage="https://th.bing.com/th/id/OIP.TftfstX0ZbE_nplCVPOd1QHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7="
-               description="16'0000" />
-            <ContactCard
-               Url="https://github.com/eric97278"
-               name="eric chillan"
-               image="https://th.bing.com/th/id/OIP.eNIyS5Ol1HFyu899KRlyFAHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-               mediumImage="https://th.bing.com/th/id/OIP.Cn9SAHCmTy8MEaixr8bqpAHaHa?w=207&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-               description="16'0000" />
-            <ContactCard
-               Url="mailto:ericchillan@gmail.com"
-               name="@ericchillan"
-               image="https://th.bing.com/th/id/OIP.eNIyS5Ol1HFyu899KRlyFAHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-               mediumImage="https://th.bing.com/th/id/OIP.TftfstX0ZbE_nplCVPOd1QHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7="
-               description="Email me for any inquiries." />
-            
+      <Section className="flex max-md:flex-col items-start gap-4">
+         <div className="flex-[3] w-full">
+            <Card className=" p-4 w-full flex flex-col gap-2 w-ful">
+               <p className="text-lg text-muted-foreground">
+            Je suis ravi de partager mon portfolio avec vous et de vous donner un aperçu de mon travail. J'ai hâte de collaborer sur des projets passionnants à l'avenir et de contribuer à vos initiatives.
+
+            N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez discuter d'une potentielle collaboration.
+
+            Vous pouvez me joindre via :
+            <ul>
+             <a href="mailTo:ericchillan@gmail.com">Par mail?</a>
+            </ul>
+            <ul>
+             <a href="" className="text-red">Sur GitHub?</a>
+            </ul>
+            <ul>
+             <a href="">Ou bien via Linkedin?</a>
+            </ul>
+                  <span className="text-lg text-muted-foreground">Au plaisir d'échanger avec vous.</span> 
+                  </p>
+            </Card>
          </div>    
       </Section>
    );
