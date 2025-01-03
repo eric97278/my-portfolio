@@ -30,7 +30,7 @@ export const Header = () => {
                   className={cn(buttonVariants({ variant: "outline" }), "size-10 p-0")}>
                   <SiBento  size={26} className="text-foreground" />
                </Link>
-               <a href="mailTo:ericchillan@gmail.com"><Code>M'envoyer un message?</Code></a>
+               <a href="mailTo:ericchillan@gmail.com"><Code>M&apos;envoyer un message?</Code></a>
             </ul> 
          </Section>
       </header>

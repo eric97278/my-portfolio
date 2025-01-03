@@ -13,7 +13,7 @@ export const Head = () => {
          <h3 className="text-3xl font-caption">
                   Developpeur Full-Stack en recherche alternance</h3>
                
-         <p>Je suis actuellement en formation à Ada Tech School, une école pionnière dans l'apprentissage inclusif des métiers de la tech. Je recherche une alternance en tant que développeur Full Stack pour mettre en pratique mes compétences acquises en développement web, et continuer à évoluer dans un environnement professionnel stimulant. Motivé par l'innovation et le travail en équipe, je suis prêt à contribuer à des projets ambitieux tout en continuant à me former au sein d'une entreprise dynamique.</p>
+         <p>Je suis actuellement en formation à Ada Tech School, une école pionnière dans l&apos;apprentissage inclusif des métiers de la tech. Je recherche une alternance en tant que développeur Full Stack pour mettre en pratique mes compétences acquises en développement web, et continuer à évoluer dans un environnement professionnel stimulant. Motivé par l&apos;innovation et le travail en équipe, je suis prêt à contribuer à des projets ambitieux tout en continuant à me former au sein d&apos;une entreprise dynamique.</p>
       </div>
       <div className="flex-[2] max-md:m-auto ml-auto">
          <img

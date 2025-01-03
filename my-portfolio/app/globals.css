@@ -54,3 +54,29 @@ background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f, #6a85b6, #bac8e0,
   background-size: 400% 400%;
   animation: gradientAnimation 20s ease infinite;
 }
+
+/* Animation permanente */
+.permanent-animation {
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  text-decoration: none;
+  animation: float 2s infinite ease-in-out;
+  /* L'animation est permanente */
+}
+
+/* Keyframes pour l'effet de mouvement */
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.1);
+    /* Lien monte et grandit légèrement */
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}

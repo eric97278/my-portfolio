@@ -68,7 +68,7 @@ const SIDE_PROJECTS:SideProjectProps[] = [
    {
       Logo: Sun,
       title: "Projet-météo",
-      description: <p>Un projet collectif pour se faire la main avec les <Code>API</Code>, ce projet en <Code>HTML, JS et CSS</Code>utilise une API météo ainsi que l'API de spotify proposant une playlist selon la météo et mettant en place des animations climatique</p>,
+      description: <p>Un projet collectif pour se faire la main avec les <Code>API</Code>, ce projet en <Code>HTML, JS et CSS</Code>utilise une API météo ainsi que l&apos;API de spotify proposant une playlist selon la météo et mettant en place des animations climatique</p>,
       url: "https://github.com/eric97278/projet-API"
    },
    {
@@ -156,7 +156,7 @@ const WORKS: WorkProps[] = [{
    {
       image: "https://th.bing.com/th/id/OIP.6IA3JYj9tixYW9GvfnkSxgHaHT?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
       title: "Centre de loisirs",
-      role: "Animateurs",
+      role: "Animateurs/directeur adjoint",
       date: "2022-2023",
       url: "https://l'oréal.com",
       contrat: "CDI",
